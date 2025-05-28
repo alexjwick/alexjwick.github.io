@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Wick - Product Builder & Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Alex Wick, a product builder and software engineer specializing in turning ideas into shipped products. Explore projects, experience, and skills in Computer Science, Next.js, AWS, and more."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/output.css" />
+  </head>
+  <body
+    class="bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <!-- Header -->
+    <header
+      class="fixed top-0 w-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
+    >
+      <nav class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#home" class="font-heading font-bold text-xl">Alex Wick</a>
+
+          <div
+            id="main-nav-links"
+            class="hidden absolute top-full left-0 right-0 w-full bg-white dark:bg-dark-bg shadow-lg p-6 flex-col items-stretch gap-4 z-40 md:flex md:static md:w-auto md:flex-row md:items-center md:gap-8 md:p-0 md:shadow-none md:bg-transparent dark:md:bg-transparent"
+          >
+            <a
+              href="#about"
+              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              >Projects</a
+            >
+            <a
+              href="#press"
+              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              >Press</a
+            >
+            <a
+              href="#contact"
+              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              >Contact</a
+            >
+            <a
+              href="#resume"
+              class="block text-center md:text-left md:inline-block bg-gray-900 dark:bg-alex-green text-white dark:text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+              >Resume</a
+            >
+            <button
+              id="theme-toggle"
+              aria-label="Toggle theme"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors self-center md:self-auto mt-4 md:mt-0"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-toggle"
+            aria-label="Toggle navigation menu"
+            class="md:hidden p-2"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center px-6 pt-20"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6">
+          Turning <span class="gradient-text">Loose Ideas</span><br />
+          Into Shipped Products
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+        >
+          Computer Science @ Brown • Builder at heart • Happiest when solving
+          hard problems with people who care about the details
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#projects"
+            class="bg-alex-green text-gray-900 px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            View Projects
+          </a>
+          <a
+            href="#contact"
+            class="border border-gray-300 dark:border-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+          >
+            Let's Connect
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8">About</h2>
+        <div class="prose prose-lg dark:prose-invert max-w-none">
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+            I'm a builder who loves turning loose ideas into products that make
+            a dent.
+          </p>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+            Finishing my Computer Science degree at Brown gave me a rock-solid
+            technical foundation, and building real products put those skills to
+            the test. In the last few years I've prototyped a digital health app
+            at a startup accelerator, scaled an election forecast site to 30k+
+            hits per month, and delivered factory software at BETA Technologies
+            that shaved hours off technicians' days.
+          </p>
+          <p class="text-lg text-gray-700 dark:text-gray-300">
+            I swap comfortably between code, customers, and metrics—whatever
+            moves the needle. Curious by default, data-minded by habit, and
+            happiest working with people who care about the details. Always
+            looking for the next hard problem and a team that wants to solve it.
+          </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="mt-12">
+          <h3 class="font-heading text-2xl font-bold mb-6">Technical Skills</h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >Python</span
+            >
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >TypeScript</span
+            >
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >Next.js</span
+            >
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >React</span
+            >
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >AWS</span
+            >
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >PostgreSQL</span
+            >
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >Machine Learning</span
+            >
+            <span
+              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              >Full-Stack Development</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-12">
+          Experience
+        </h2>
+
+        <div class="space-y-12">
+          <div
+            class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -left-2 top-0 w-4 h-4 bg-alex-green rounded-full"
+            ></div>
+            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+              Sep 2023 - Nov 2024
+            </div>
+            <h3 class="text-xl font-semibold mb-2">
+              Web Operations Lead & Developer
+            </h3>
+            <div class="text-gray-600 dark:text-gray-400 mb-3">24cast.org</div>
+            <ul
+              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+            >
+              <li>
+                Recruited and led cross-functional team of 5; owned GTM strategy
+                from product roadmap to market launch
+              </li>
+              <li>
+                Grew site to 30,000 monthly pageviews and press coverage in 2
+                months
+              </li>
+              <li>
+                Built Next.js/AWS architecture & CI/CD, cutting release cycle
+                from weekly to daily
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -left-2 top-0 w-4 h-4 bg-alex-green rounded-full"
+            ></div>
+            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+              May 2024 - Oct 2024
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Software Engineer Intern</h3>
+            <div class="text-gray-600 dark:text-gray-400 mb-3">
+              BETA Technologies
+            </div>
+            <ul
+              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+            >
+              <li>
+                Led cross-functional squad (quality, ops, eng) to launch factory
+                floor non-conformance app
+              </li>
+              <li>
+                Slashed issue response time from 1-2 days to 30 minutes,
+                unlocking on-time production goals
+              </li>
+              <li>
+                Generated OpenAPI docs for over 11,000 ERP endpoints, enabling
+                teams to self-serve data
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -left-2 top-0 w-4 h-4 bg-alex-green rounded-full"
+            ></div>
+            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+              Jan 2024 - Aug 2024
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Teaching Assistant</h3>
+            <div class="text-gray-600 dark:text-gray-400 mb-3">
+              Brown University Department of Computer Science
+            </div>
+            <ul
+              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+            >
+              <li>
+                Fall 2024: Socially Responsible Computing content development
+                for CS410 (Foundations of Artificial Intelligence)
+              </li>
+              <li>
+                Spring 2024: UTA-STA for CS300 (Fundamentals of Computer
+                Systems)
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -left-2 top-0 w-4 h-4 bg-alex-green rounded-full"
+            ></div>
+            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+              Aug 2022 - May 2024
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Developer Intern</h3>
+            <div class="text-gray-600 dark:text-gray-400 mb-3">
+              Bluehouse Group
+            </div>
+            <ul
+              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+            >
+              <li>
+                Reimagined local radio station brand online: designed content
+                strategy, rebuilt CMS & database; grew traffic 56% three months
+                post-launch
+              </li>
+              <li>
+                Re-platformed vacation rental product, delivering database
+                schema that improved scalability
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -left-2 top-0 w-4 h-4 bg-alex-green rounded-full"
+            ></div>
+            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+              Jun 2023 - Sep 2023
+            </div>
+            <h3 class="text-xl font-semibold mb-2">
+              Co-Founder, Software Engineer
+            </h3>
+            <div class="text-gray-600 dark:text-gray-400 mb-3">Freedays</div>
+            <ul
+              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+            >
+              <li>
+                Led software development of a solution for vaping cessation
+                using Next.js, Flask, PostgreSQL, and integrated a fine-tuned
+                LLM for personalized interventions
+              </li>
+              <li>
+                Shipped MVP (Next.js + Flask + LLM); pitched to investors and
+                500+ Brown community members at B-Lab showcase
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="absolute -left-2 top-0 w-4 h-4 bg-alex-green rounded-full"
+            ></div>
+            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+              Jun 2023 - Jul 2023
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Breakthrough Lab Fellow</h3>
+            <div class="text-gray-600 dark:text-gray-400 mb-3">
+              Nelson Center for Entrepreneurship
+            </div>
+            <ul
+              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+            >
+              <li>
+                Participated in Brown University's 8-week startup accelerator,
+                focusing on intensive entrepreneurial training
+              </li>
+              <li>
+                Developed skills in customer discovery, value proposition
+                creation, legal incorporation, and pitching
+              </li>
+              <li>
+                Conducted 75+ customer interviews and defined TAM/SAM/SOM for a
+                vaping cessation platform, winning entry to B-Lab accelerator
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-12">
+          Featured Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1: 24cast.org -->
+          <div
+            class="bg-white dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-blue-500 to-purple-600"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">24cast.org</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Election forecast platform built with Next.js/AWS. Scaled to
+                30k+ MAU with real-time data processing and journalist-friendly
+                insights.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >Next.js</span
+                >
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >AWS</span
+                >
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >TypeScript</span
+                >
+              </div>
+              <a
+                href="#"
+                class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+                >View Project →</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 2: Deepfake Detection -->
+          <div
+            class="bg-white dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-green-500 to-teal-600"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Deepfake Detection CNN</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Developed ML model using VGG16 architecture achieving 85%
+                validation accuracy. Custom CNN implementation from scratch.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >Python</span
+                >
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >TensorFlow</span
+                >
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >Keras</span
+                >
+              </div>
+              <a
+                href="#"
+                class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+                >View Project →</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 3: Weenix OS -->
+          <div
+            class="bg-white dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-orange-500 to-red-600"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Weenix Operating System
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Full Unix-like OS kernel with threads, processes, device
+                drivers, file system, and virtual memory implementation.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >C</span
+                >
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >Systems</span
+                >
+                <span
+                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  >Kernel</span
+                >
+              </div>
+              <a
+                href="#"
+                class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+                >View Project →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press Section -->
+    <section id="press" class="py-20 px-6 bg-white dark:bg-dark-bg">
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="font-heading text-3xl md:text-4xl font-bold mb-12 text-center md:text-left"
+        >
+          Press
+        </h2>
+        <div class="space-y-8">
+          <article class="border-b border-gray-200 dark:border-gray-700 pb-8">
+            <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+              September 26, 2024
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-3 hover:text-alex-green transition-colors"
+            >
+              <a
+                href="https://www.browndailyherald.com/article/2024/09/get-to-know-the-election-result-prediction-model-developed-by-brown-students"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get to know the election-result prediction model developed by
+                Brown students</a
+              >
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              The Brown Daily Herald
+            </p>
+            <a
+              href="https://www.browndailyherald.com/article/2024/09/get-to-know-the-election-result-prediction-model-developed-by-brown-students"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+              >Read More &rarr;</a
+            >
+          </article>
+
+          <article class="border-b border-gray-200 dark:border-gray-700 pb-8">
+            <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+              July 7, 2023
+            </div>
+            <h3
+              class="text-2xl font-semibold mb-3 hover:text-alex-green transition-colors"
+            >
+              <a
+                href="https://www.brown.edu/news/2023-07-07/b-lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Brown entrepreneurs developing innovations in STEM education,
+                vaping cessation and more</a
+              >
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Brown University News
+            </p>
+            <a
+              href="https://www.brown.edu/news/2023-07-07/b-lab"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+              >Read More &rarr;</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8">Resume</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+          Download my full resume for a comprehensive overview of my experience
+          and qualifications.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="Alex_Wick_Resume.pdf"
+            download
+            target="_blank"
+            class="bg-alex-green text-gray-900 px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            Download PDF Resume
+          </a>
+          <a
+            href="resume.html"
+            target="_blank"
+            class="border border-gray-300 dark:border-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+          >
+            View HTML Version
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8">
+          Let's Connect
+        </h2>
+        <p
+          class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto"
+        >
+          I'm always interested in new opportunities and collaborations. Whether
+          you have a project in mind or just want to chat, feel free to reach
+          out.
+        </p>
+
+        <div class="flex justify-center gap-6 mb-8">
+          <!-- Email -->
+          <a
+            href="mailto:alex@alexwick.co"
+            aria-label="Email Alex Wick"
+            class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+              ></path>
+              <path
+                d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+              ></path>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com/in/alexjwick"
+            aria-label="Alex Wick on LinkedIn"
+            target="_blank"
+            class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/alexjwick"
+            aria-label="Alex Wick on GitHub"
+            target="_blank"
+            class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <a
+          href="mailto:alex@alexwick.co"
+          class="bg-alex-green text-gray-900 px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-block"
+        >
+          Send Me an Email
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-800">
+      <div
+        class="max-w-6xl mx-auto text-center text-sm text-gray-600 dark:text-gray-400"
+      >
+        <p>© 2025 Alex Wick. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
