@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
         "alex-green": "#00D67E",
-        "alex-green-light-text": "#008B45",
+        "alex-green-light-text": "#00693E",
         "dark-bg": "#0F0F0F",
         "dark-surface": "#1A1A1A",
       },
