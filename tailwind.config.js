@@ -1,4 +1,5 @@
 tailwind.config = {
+  content: ["./index.html", "./resume.html", "./main.js"],
   darkMode: "class",
   theme: {
     extend: {
@@ -7,7 +8,8 @@ tailwind.config = {
         heading: ["Space Grotesk", "sans-serif"],
       },
       colors: {
-        "beta-green": "#00D67E",
+        "alex-green": "#00D67E",
+        "alex-green-light-text": "#008B45",
         "dark-bg": "#0F0F0F",
         "dark-surface": "#1A1A1A",
       },
