@@ -79,13 +79,27 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Add scroll effect to header (shadow)
 const header = document.querySelector("header");
+
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
 if (header) {
-  window.addEventListener("scroll", () => {
+  const handleHeaderScroll = () => {
     const currentScroll = window.pageYOffset;
     if (currentScroll > 50) {
       header.classList.add("shadow-lg");
     } else {
       header.classList.remove("shadow-lg");
     }
-  });
+  };
+  window.addEventListener("scroll", debounce(handleHeaderScroll, 100)); // Debounce by 100ms
 }
