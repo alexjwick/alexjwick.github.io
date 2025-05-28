@@ -4,16 +4,20 @@
   "description": "Personal portfolio website showcasing projects and experience.",
   "main": "main.js",
   "scripts": {
-    "build:css": "npx tailwindcss -i ./styles/input.css -o ./styles/output.css --minify",
-    "watch:css": "npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
-    "build": "npm run build:css"
+    "build:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --minify",
+    "watch:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
+    "build": "npm run build:css",
+    "dev": "npm run watch:css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.8"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "@tailwindcss/postcss": "^4.1.8"
   }
 }
