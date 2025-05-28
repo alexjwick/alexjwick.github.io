@@ -1,4 +1,4 @@
-tailwind.config = {
+module.exports = {
   content: ["./index.html", "./resume.html", "./main.js"],
   darkMode: "class",
   theme: {
@@ -15,4 +15,5 @@ tailwind.config = {
       },
     },
   },
+  plugins: [],
 };
