@@ -25,40 +25,43 @@
         <div class="flex items-center justify-between">
           <a href="#home" class="font-heading font-bold text-xl">Alex Wick</a>
 
-          <div class="hidden md:flex items-center gap-8">
+          <div
+            id="main-nav-links"
+            class="hidden absolute top-full left-0 right-0 w-full bg-white dark:bg-dark-bg shadow-lg p-6 flex-col items-stretch gap-4 z-40 md:flex md:static md:w-auto md:flex-row md:items-center md:gap-8 md:p-0 md:shadow-none md:bg-transparent dark:md:bg-transparent"
+          >
             <a
               href="#about"
-              class="text-sm font-medium hover:text-beta-green transition-colors"
+              class="block md:inline text-sm font-medium hover:text-beta-green transition-colors py-2 md:py-0"
               >About</a
             >
             <a
               href="#experience"
-              class="text-sm font-medium hover:text-beta-green transition-colors"
+              class="block md:inline text-sm font-medium hover:text-beta-green transition-colors py-2 md:py-0"
               >Experience</a
             >
             <a
               href="#projects"
-              class="text-sm font-medium hover:text-beta-green transition-colors"
+              class="block md:inline text-sm font-medium hover:text-beta-green transition-colors py-2 md:py-0"
               >Projects</a
             >
             <a
               href="#press"
-              class="text-sm font-medium hover:text-beta-green transition-colors"
+              class="block md:inline text-sm font-medium hover:text-beta-green transition-colors py-2 md:py-0"
               >Press</a
             >
             <a
               href="#contact"
-              class="text-sm font-medium hover:text-beta-green transition-colors"
+              class="block md:inline text-sm font-medium hover:text-beta-green transition-colors py-2 md:py-0"
               >Contact</a
             >
             <a
               href="#resume"
-              class="bg-gray-900 dark:bg-beta-green text-white dark:text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+              class="block text-center md:text-left md:inline-block bg-gray-900 dark:bg-beta-green text-white dark:text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
               >Resume</a
             >
             <button
               id="theme-toggle"
-              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors self-center md:self-auto mt-4 md:mt-0"
             >
               <svg
                 class="w-5 h-5 hidden dark:block"
@@ -131,28 +134,6 @@
             Let's Connect
           </a>
         </div>
-
-        <!-- Key metrics -->
-        <!-- <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20">
-          <div class="text-center">
-            <div class="text-3xl font-bold text-beta-green">30k+</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
-              Monthly Active Users
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-beta-green">56%</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
-              Traffic Growth
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-beta-green">85%</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
-              ML Model Accuracy
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
 
