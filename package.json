@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio website showcasing projects and experience.",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "build:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --minify",
     "watch:css": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
