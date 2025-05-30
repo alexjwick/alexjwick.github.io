@@ -6,14 +6,13 @@
     <title>Deepfake Detection CNN - Alex Wick</title>
     <meta
       name="description"
-      content="Machine learning model using VGG16 architecture achieving 85% validation accuracy in detecting deepfake images"
+      content="Exploration of Convolutional Neural Networks for deepfake detection, achieving 80% validation accuracy with a custom model on a challenging combined dataset."
     />
     <link rel="stylesheet" href="styles/output.css" />
   </head>
   <body
     class="bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300"
   >
-    <!-- Header -->
     <header
       class="fixed top-0 w-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
     >
@@ -55,15 +54,15 @@
       </nav>
     </header>
 
-    <!-- Project Hero -->
     <section class="pt-32 pb-20 px-6">
       <div class="max-w-4xl mx-auto">
         <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6">
           Deepfake Detection CNN
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-          Advanced machine learning model achieving 85% validation accuracy in
-          distinguishing real from AI-generated images
+          Exploration of Convolutional Neural Networks for deepfake detection,
+          culminating in a custom CNN achieving 80% validation accuracy on a
+          challenging combined dataset of real and AI-generated images.
         </p>
         <div class="flex flex-wrap gap-3 mb-8">
           <span
@@ -80,6 +79,10 @@
           >
           <span
             class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >CNN</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
             >VGG16</span
           >
           <span
@@ -89,66 +92,124 @@
         </div>
         <div class="flex gap-4">
           <a
-            href="https://github.com/alexjwick"
+            href="https://devpost.com/software/lightweight-deepfake-detectors"
             target="_blank"
             rel="noopener noreferrer"
             class="bg-alex-green text-gray-900 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            View on GitHub →
+            View Devpost →
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Project Details -->
     <section class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
       <div class="max-w-4xl mx-auto">
         <div class="mb-12">
           <h2 class="font-heading text-3xl font-bold mb-6">Overview</h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            As deepfake technology becomes increasingly sophisticated, the
-            ability to detect AI-generated images is crucial for maintaining
-            trust in digital media. This project implements a custom
-            Convolutional Neural Network (CNN) based on the VGG16 architecture
-            to identify deepfake images with high accuracy.
+            The proliferation of highly realistic deepfakes poses a significant
+            challenge to digital media integrity. This project aimed to develop
+            an effective deepfake detection model. Initially, the goal was to
+            improve upon the ~70% accuracy of a CNN-based model by Karandikar et
+            al. (2020), which utilized the VGG16 architecture.
+          </p>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            The project involved working with datasets like FaceForensics++
+            (first-generation deepfakes) and Celeb-DF (v2) (more advanced
+            deepfakes). While the VGG16-based approach showed promise (achieving
+            90% validation on FaceForensics++ alone and 75.69% on a combined
+            dataset), it faced challenges with overfitting and complexity when
+            applied to the harder, combined dataset.
           </p>
           <p class="text-lg text-gray-700 dark:text-gray-300">
-            The model was trained on a diverse dataset of real and AI-generated
-            faces, learning to identify subtle artifacts and patterns that
-            distinguish authentic images from deepfakes.
+            This led to the development of a lighter, custom Convolutional
+            Neural Network (CNN) from scratch. This custom CNN, with
+            approximately 6.5 million parameters, ultimately achieved an 80%
+            validation accuracy on the challenging combined dataset,
+            outperforming the VGG16-based approach on the same data. The project
+            began after an initial exploration of DefakeHop++, which was pivoted
+            away from due to its limited use of deep learning techniques.
           </p>
         </div>
 
         <div class="mb-12">
           <h2 class="font-heading text-3xl font-bold mb-6">
-            Technical Approach
+            Technical Approach & Model Architectures
           </h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            The project involved several key technical components:
+            The project explored two main CNN-based approaches for deepfake
+            detection after an initial pivot:
           </p>
           <ul
-            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
+            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-6 ml-4"
           >
             <li>
-              <strong>Architecture:</strong> Custom CNN implementation based on
-              VGG16, known for its effectiveness in image classification tasks
+              <strong>VGG16-based Model with Custom Head:</strong>
+              <ul class="list-disc list-inside text-base space-y-1 ml-6 mt-2">
+                <li>
+                  Utilized transfer learning, leveraging the pretrained
+                  convolutional layers of VGG16.
+                </li>
+                <li>
+                  A custom classification head was added, differing from the
+                  original Karandikar et al. paper by using a binary
+                  classification output with a sigmoid activation and a revised
+                  layer ordering to potentially reduce overfitting.
+                </li>
+                <li>
+                  Data preprocessing involved face detection (libface detector),
+                  cropping with a 30% margin, and alignment (cv2). Frames were
+                  selected to ensure balanced classes.
+                </li>
+                <li>
+                  This model had ~14.7M parameters from VGG16 and ~1.7M from the
+                  custom head.
+                </li>
+              </ul>
             </li>
             <li>
-              <strong>Data Preprocessing:</strong> Implemented augmentation
-              techniques to improve model generalization
-            </li>
-            <li>
-              <strong>Training Strategy:</strong> Used transfer learning to
-              leverage pre-trained weights, then fine-tuned on deepfake-specific
-              features
-            </li>
-            <li>
-              <strong>Optimization:</strong> Applied regularization techniques
-              to prevent overfitting
-            </li>
-            <li>
-              <strong>Evaluation:</strong> Comprehensive testing on holdout
-              validation set
+              <strong>Custom CNN Model (from scratch):</strong>
+              <ul class="list-disc list-inside text-base space-y-1 ml-6 mt-2">
+                <li>
+                  Developed to address the complexity and overfitting issues
+                  encountered with the VGG16-based model.
+                </li>
+                <li>Totaled approximately 6.5 million parameters.</li>
+                <li>
+                  Architecture included:
+                  <ul
+                    class="list-disc list-inside text-sm space-y-1 ml-6 mt-1 font-mono"
+                  >
+                    <li>
+                      Conv2D (32 filters, 3x3) -> BatchNormalization ->
+                      MaxPool2D
+                    </li>
+                    <li>
+                      Conv2D (64 filters, 3x3) -> BatchNormalization ->
+                      MaxPool2D
+                    </li>
+                    <li>
+                      Conv2D (64 filters, 3x3) -> BatchNormalization ->
+                      MaxPool2D
+                    </li>
+                    <li>Flatten</li>
+                    <li>
+                      Dense (64, LeakyReLU, L2 regularizer) -> Dropout(0.5) ->
+                      BatchNormalization
+                    </li>
+                    <li>
+                      Dense (64, LeakyReLU, L2 regularizer) -> Dropout(0.5) ->
+                      BatchNormalization
+                    </li>
+                    <li>Dense (1, sigmoid, L2 regularizer)</li>
+                  </ul>
+                </li>
+                <li>
+                  This model achieved the highest validation accuracy (80%) on
+                  the combined dataset.
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -157,52 +218,34 @@
           <h2 class="font-heading text-3xl font-bold mb-6">Key Results</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg text-center">
-              <h3 class="text-3xl font-bold text-alex-green mb-2">85%</h3>
+              <h3 class="text-3xl font-bold text-alex-green mb-2">80%</h3>
               <p class="text-gray-600 dark:text-gray-400">
-                Validation Accuracy
+                Validation Accuracy (Custom CNN on Combined FF++ & Celeb-DF v2)
               </p>
             </div>
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg text-center">
-              <h3 class="text-3xl font-bold text-alex-green mb-2">0.92</h3>
-              <p class="text-gray-600 dark:text-gray-400">AUC-ROC Score</p>
+              <h3 class="text-3xl font-bold text-alex-green mb-2">75.7%</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Validation Accuracy (VGG16-based on Combined FF++ & Celeb-DF v2)
+              </p>
             </div>
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg text-center">
-              <h3 class="text-3xl font-bold text-alex-green mb-2">~50ms</h3>
-              <p class="text-gray-600 dark:text-gray-400">Inference Time</p>
+              <h3 class="text-3xl font-bold text-alex-green mb-2">90%</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Validation Accuracy (VGG16-based on FaceForensics++ only)
+              </p>
             </div>
           </div>
-        </div>
-
-        <div class="mb-12">
-          <h2 class="font-heading text-3xl font-bold mb-6">
-            Implementation Details
-          </h2>
-          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            The model architecture consists of:
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+            The original Karandikar et al. (2020) paper reported ~70% accuracy
+            with their VGG16-based model. Both models developed in this project
+            surpassed that on comparable tasks.
           </p>
-          <ul
-            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
-          >
-            <li>Convolutional base from VGG16 for feature extraction</li>
-            <li>
-              Custom fully connected layers for deepfake-specific classification
-            </li>
-            <li>Batch normalization and dropout for regularization</li>
-            <li>Binary cross-entropy loss with Adam optimizer</li>
-          </ul>
-          <div class="mt-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-            <p class="text-sm text-gray-600 dark:text-gray-400 font-mono">
-              Model: "deepfake_detector"<br />
-              Total params: 15,234,881<br />
-              Trainable params: 7,642,369<br />
-              Non-trainable params: 7,592,512
-            </p>
-          </div>
         </div>
 
         <div class="mb-12">
           <h2 class="font-heading text-3xl font-bold mb-6">
-            Challenges & Solutions
+            Challenges & Learnings
           </h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
             Several challenges were encountered and overcome during development:
@@ -211,20 +254,37 @@
             class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
           >
             <li>
-              <strong>Dataset Imbalance:</strong> Addressed through strategic
-              data augmentation and weighted loss functions
+              <strong>Overfitting:</strong> This was the primary challenge,
+              especially with the complex VGG16 model on the combined dataset,
+              leading to a persistent gap between training and validation
+              accuracies. Various techniques like regularization, dropout, and
+              hyperparameter tuning were explored.
             </li>
             <li>
-              <strong>Overfitting:</strong> Mitigated using dropout layers and
-              early stopping
+              <strong>Data Augmentation:</strong> Attempts to use data
+              augmentation (e.g., noise, brightness adjustment) yielded mixed
+              results, sometimes worsening overfitting. Transformative
+              augmentations (rotation, zoom) interfered with the facial
+              alignment preprocessing.
             </li>
             <li>
-              <strong>Computational Resources:</strong> Optimized training
-              through mixed precision and gradient accumulation
+              <strong>Preprocessing Imperfections:</strong> The face detection
+              algorithm occasionally misidentified non-face objects (e.g.,
+              buttons, posters) as faces, potentially impacting model training.
+              Manually checking nearly 100,000 frames was infeasible.
             </li>
             <li>
-              <strong>Generalization:</strong> Improved by training on diverse
-              deepfake generation methods
+              <strong>Hardware Constraints:</strong> Training was performed on
+              an M2 MacBook Pro. Limited computational resources and disk space
+              made it challenging to effectively parallelize
+              preprocessing/training and handle the large datasets required for
+              optimal fine-tuning of VGG16.
+            </li>
+            <li>
+              <strong>Initial Project Pivot:</strong> The project initially
+              aimed to implement DefakeHop++, but pivoted to a CNN-based
+              approach after discovering DefakeHop++ lacked substantial deep
+              learning components.
             </li>
           </ul>
         </div>
@@ -234,27 +294,27 @@
             Future Enhancements
           </h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            Potential improvements for the model include:
+            Potential improvements and future directions for the model include:
           </p>
           <ul
             class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
           >
             <li>
-              Expanding to video deepfake detection using temporal analysis
+              Implementing a more fine-tuned transfer learning approach for
+              VGG16, involving unfreezing more layers and training with a very
+              low learning rate, potentially with a larger dataset if hardware
+              permits.
             </li>
             <li>
-              Implementing attention mechanisms to highlight suspicious regions
-            </li>
-            <li>Creating an API for real-time detection in applications</li>
-            <li>
-              Training on newer deepfake generation techniques as they emerge
+              Further developing and refining the lightweight custom CNN
+              architecture, which showed promising results in balancing
+              performance and complexity.
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Next Project -->
     <section class="py-20 px-6">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="font-heading text-2xl font-bold mb-8">Next Project</h2>
@@ -280,7 +340,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-800">
       <div
         class="max-w-6xl mx-auto text-center text-sm text-gray-600 dark:text-gray-400"
