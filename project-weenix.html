@@ -6,14 +6,13 @@
     <title>Weenix Operating System - Alex Wick</title>
     <meta
       name="description"
-      content="Full Unix-like operating system kernel implementation with threads, processes, device drivers, file system, and virtual memory"
+      content="Full Unix-like operating system kernel implementation with threads, processes, device drivers, file system, and virtual memory, based on x86_64 architecture."
     />
     <link rel="stylesheet" href="styles/output.css" />
   </head>
   <body
     class="bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300"
   >
-    <!-- Header -->
     <header
       class="fixed top-0 w-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
     >
@@ -55,15 +54,15 @@
       </nav>
     </header>
 
-    <!-- Project Hero -->
     <section class="pt-32 pb-20 px-6">
       <div class="max-w-4xl mx-auto">
         <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6">
           Weenix Operating System
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-          A complete Unix-like operating system kernel built from scratch as
-          part of Brown's Operating Systems course
+          A complete Unix-like operating system kernel for the x86_64
+          architecture, built as part of Brown's Operating Systems course (CSCI
+          1670/1690).
         </p>
         <div class="flex flex-wrap gap-3 mb-8">
           <span
@@ -84,6 +83,10 @@
           >
           <span
             class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >File Systems</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
             >Virtual Memory</span
           >
         </div>
@@ -96,7 +99,6 @@
       </div>
     </section>
 
-    <!-- Project Details -->
     <section class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
       <div class="max-w-4xl mx-auto">
         <div class="mb-12">
@@ -104,14 +106,17 @@
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
             Weenix is a semester-long project that involves building a fully
             functional Unix-like operating system kernel from the ground up.
-            This intensive project is considered one of the most challenging and
-            rewarding experiences in Brown's Computer Science curriculum.
+            Originally developed in 1998 and based on early Unix versions,
+            Weenix has evolved to run on QEMU and supports the x86_64
+            architecture, incorporating modern OS concepts. This intensive
+            project is renowned for its depth and is a cornerstone of Brown's
+            Computer Science curriculum.
           </p>
           <p class="text-lg text-gray-700 dark:text-gray-300">
             The kernel implements all the fundamental components of a modern
             operating system, providing hands-on experience with low-level
-            systems programming and deep understanding of how operating systems
-            work under the hood.
+            systems programming and fostering a deep understanding of OS
+            internals.
           </p>
         </div>
 
@@ -120,39 +125,58 @@
             Implementation Phases
           </h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            The project was completed in four major phases, each building upon
+            The project was completed in five major phases, each building upon
             the previous:
           </p>
 
           <div class="space-y-6">
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
-              <h3 class="text-xl font-semibold mb-2">1. Threads & Processes</h3>
+              <h3 class="text-xl font-semibold mb-2">
+                1. Processes & Threads (Procs)
+              </h3>
               <p class="text-gray-600 dark:text-gray-400 mb-2">
-                Implemented the foundation of the kernel with thread management
-                and process control.
+                Implemented the kernel's core concurrency mechanisms. Weenix
+                processes have a single kernel thread, and there's no
+                kernel-mode preemption; threads run until they explicitly yield.
               </p>
               <ul
                 class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
               >
-                <li>Thread creation, scheduling, and synchronization</li>
-                <li>Process management with fork(), exec(), and wait()</li>
-                <li>Mutex locks and condition variables</li>
-                <li>Priority-based scheduler implementation</li>
+                <li>
+                  Kernel thread creation, scheduling (FIFO run queue), and
+                  synchronization primitives (mutexes).
+                </li>
+                <li>
+                  Process management including `fork()`, `exec()`-like behavior
+                  (`kernel_execve`), and `waitpid()` for process lifecycle
+                  control.
+                </li>
+                <li>
+                  Context switching logic (core_switch provided, sched_switch
+                  implemented).
+                </li>
               </ul>
             </div>
 
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
               <h3 class="text-xl font-semibold mb-2">2. Device Drivers</h3>
               <p class="text-gray-600 dark:text-gray-400 mb-2">
-                Created drivers for hardware interaction and terminal I/O.
+                Created drivers for hardware interaction, terminal I/O, disk
+                access, and memory devices.
               </p>
               <ul
                 class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
               >
-                <li>TTY (terminal) driver with line discipline</li>
-                <li>Keyboard and display drivers</li>
-                <li>Interrupt handling and device management</li>
-                <li>Character and block device interfaces</li>
+                <li>
+                  TTY (terminal) driver, including line discipline for input
+                  buffering and "cooking".
+                </li>
+                <li>Keyboard and screen drivers.</li>
+                <li>SATA disk driver for block read/write operations.</li>
+                <li>
+                  Memory devices `/dev/null` (data sink) and `/dev/zero`
+                  (zero-byte source).
+                </li>
               </ul>
             </div>
 
@@ -161,32 +185,78 @@
                 3. Virtual File System (VFS)
               </h3>
               <p class="text-gray-600 dark:text-gray-400 mb-2">
-                Built a complete file system layer with multiple file system
-                support.
+                Built an abstraction layer to support multiple concrete file
+                systems with a unified interface.
               </p>
               <ul
                 class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
               >
-                <li>VFS abstraction layer</li>
-                <li>S5FS (System V File System) implementation</li>
-                <li>File operations: open, read, write, seek, close</li>
-                <li>Directory operations and path resolution</li>
+                <li>
+                  Implemented `vnode_t` (virtual inode) and `file_t` structures
+                  and their management, including reference counting.
+                </li>
+                <li>
+                  Pathname-to-vnode resolution (e.g., `namev.c` functions).
+                </li>
+                <li>
+                  Initial file system interaction using `ramfs` (an in-memory
+                  file system).
+                </li>
+                <li>
+                  Generic system call interface for file operations (e.g.,
+                  `do_open`, `do_read`).
+                </li>
               </ul>
             </div>
 
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
-              <h3 class="text-xl font-semibold mb-2">4. Virtual Memory</h3>
+              <h3 class="text-xl font-semibold mb-2">
+                4. System V File System (S5FS)
+              </h3>
               <p class="text-gray-600 dark:text-gray-400 mb-2">
-                Implemented complete virtual memory management with demand
-                paging.
+                Developed a concrete on-disk file system based on the
+                traditional System V layout.
               </p>
               <ul
                 class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
               >
-                <li>Page fault handling and demand paging</li>
-                <li>Copy-on-write (COW) optimization</li>
-                <li>Memory-mapped files</li>
-                <li>Anonymous and file-backed memory regions</li>
+                <li>
+                  Managed on-disk structures: superblock, inodes, data blocks.
+                </li>
+                <li>
+                  Inode implementation including direct and a single indirect
+                  block pointer, supporting sparse files.
+                </li>
+                <li>Directory file structure and operations.</li>
+                <li>Block allocation and free block list management.</li>
+                <li>
+                  Interfaced with the VFS layer and utilized kernel caching
+                  mechanisms (`mobj_t`, `pframe_t`) for disk I/O.
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">5. Virtual Memory (VM)</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-2">
+                Implemented a complete virtual memory management system.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
+              >
+                <li>Page fault handling and demand paging.</li>
+                <li>
+                  Management of virtual memory areas (vmareas) within a
+                  process's memory map.
+                </li>
+                <li>
+                  Anonymous memory objects (for stack, heap) and shadow objects
+                  (for copy-on-write).
+                </li>
+                <li>
+                  Implementation of `fork()` with copy-on-write semantics.
+                </li>
+                <li>System calls such as `mmap()`, `munmap()`, and `brk()`.</li>
               </ul>
             </div>
           </div>
@@ -198,7 +268,7 @@
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
-              <h3 class="text-2xl font-bold text-alex-green mb-2">~15,000</h3>
+              <h3 class="text-2xl font-bold text-alex-green mb-2">>5,000</h3>
               <p class="text-gray-600 dark:text-gray-400">
                 Lines of C code written
               </p>
@@ -217,10 +287,10 @@
             </div>
             <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
               <h3 class="text-2xl font-bold text-alex-green mb-2">
-                Full POSIX
+                POSIX-like
               </h3>
               <p class="text-gray-600 dark:text-gray-400">
-                System call compliance
+                Implementation of key system calls
               </p>
             </div>
           </div>
@@ -231,27 +301,34 @@
             Key Challenges & Learning
           </h2>
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            Building an OS from scratch presented unique challenges that
-            deepened my systems programming expertise:
+            Building an OS presented unique challenges that deepened my systems
+            programming expertise:
           </p>
           <ul
             class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
           >
             <li>
               <strong>Debugging at the kernel level:</strong> Developed skills
-              in using GDB for kernel debugging without standard debugging tools
+              in using GDB for kernel debugging without standard debugging
+              tools.
             </li>
             <li>
-              <strong>Race conditions:</strong> Mastered synchronization
-              primitives and lock ordering to prevent deadlocks
+              <strong>Race conditions & Synchronization:</strong> Mastered
+              synchronization primitives and lock ordering to prevent deadlocks
+              in a non-preemptive kernel.
             </li>
             <li>
               <strong>Memory management:</strong> Gained deep understanding of
-              virtual memory, page tables, and TLB management
+              virtual memory, page tables, TLB management, and copy-on-write
+              mechanisms.
+            </li>
+            <li>
+              <strong>File System Internals:</strong> Learned intricate details
+              of on-disk file system structures (S5FS) and VFS abstractions.
             </li>
             <li>
               <strong>System architecture:</strong> Learned to design clean
-              interfaces between kernel subsystems
+              interfaces between kernel subsystems.
             </li>
           </ul>
         </div>
@@ -265,12 +342,19 @@
             class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
           >
             <li>Low-level C programming and x86 assembly</li>
-            <li>Concurrent programming and synchronization</li>
-            <li>Memory management and virtual memory systems</li>
-            <li>File system design and implementation</li>
+            <li>
+              Concurrent programming and synchronization in a kernel context
+            </li>
+            <li>
+              Memory management: virtual memory systems, paging,
+              anonymous/shadow objects
+            </li>
+            <li>
+              File system design: VFS principles and on-disk S5FS implementation
+            </li>
             <li>Hardware/software interface and interrupt handling</li>
-            <li>Debugging complex systems-level code</li>
-            <li>Reading and understanding large codebases</li>
+            <li>Debugging complex systems-level code with tools like GDB</li>
+            <li>Reading and understanding large C codebases</li>
           </ul>
         </div>
 
@@ -288,7 +372,6 @@
       </div>
     </section>
 
-    <!-- Previous Project -->
     <section class="py-20 px-6">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="font-heading text-2xl font-bold mb-8">Previous Project</h2>
@@ -314,7 +397,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-800">
       <div
         class="max-w-6xl mx-auto text-center text-sm text-gray-600 dark:text-gray-400"
