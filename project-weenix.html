@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weenix Operating System - Alex Wick</title>
+    <meta
+      name="description"
+      content="Full Unix-like operating system kernel implementation with threads, processes, device drivers, file system, and virtual memory"
+    />
+    <link rel="stylesheet" href="styles/output.css" />
+  </head>
+  <body
+    class="bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <!-- Header -->
+    <header
+      class="fixed top-0 w-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
+    >
+      <nav class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="font-heading font-bold text-xl">Alex Wick</a>
+          <div class="flex items-center gap-6">
+            <a
+              href="/"
+              class="text-sm font-medium hover:text-alex-green transition-colors"
+              >← Back to Portfolio</a
+            >
+            <button
+              id="theme-toggle"
+              aria-label="Toggle theme"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="pt-32 pb-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6">
+          Weenix Operating System
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          A complete Unix-like operating system kernel built from scratch as
+          part of Brown's Operating Systems course
+        </p>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >C</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >x86 Assembly</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >Systems Programming</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >Kernel Development</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >Virtual Memory</span
+          >
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            <strong>Note:</strong> Due to academic integrity policies, source
+            code for this project cannot be publicly shared.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">Overview</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            Weenix is a semester-long project that involves building a fully
+            functional Unix-like operating system kernel from the ground up.
+            This intensive project is considered one of the most challenging and
+            rewarding experiences in Brown's Computer Science curriculum.
+          </p>
+          <p class="text-lg text-gray-700 dark:text-gray-300">
+            The kernel implements all the fundamental components of a modern
+            operating system, providing hands-on experience with low-level
+            systems programming and deep understanding of how operating systems
+            work under the hood.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">
+            Implementation Phases
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            The project was completed in four major phases, each building upon
+            the previous:
+          </p>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">1. Threads & Processes</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-2">
+                Implemented the foundation of the kernel with thread management
+                and process control.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
+              >
+                <li>Thread creation, scheduling, and synchronization</li>
+                <li>Process management with fork(), exec(), and wait()</li>
+                <li>Mutex locks and condition variables</li>
+                <li>Priority-based scheduler implementation</li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">2. Device Drivers</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-2">
+                Created drivers for hardware interaction and terminal I/O.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
+              >
+                <li>TTY (terminal) driver with line discipline</li>
+                <li>Keyboard and display drivers</li>
+                <li>Interrupt handling and device management</li>
+                <li>Character and block device interfaces</li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">
+                3. Virtual File System (VFS)
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-2">
+                Built a complete file system layer with multiple file system
+                support.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
+              >
+                <li>VFS abstraction layer</li>
+                <li>S5FS (System V File System) implementation</li>
+                <li>File operations: open, read, write, seek, close</li>
+                <li>Directory operations and path resolution</li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2">4. Virtual Memory</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-2">
+                Implemented complete virtual memory management with demand
+                paging.
+              </p>
+              <ul
+                class="list-disc list-inside text-gray-600 dark:text-gray-400 ml-4"
+              >
+                <li>Page fault handling and demand paging</li>
+                <li>Copy-on-write (COW) optimization</li>
+                <li>Memory-mapped files</li>
+                <li>Anonymous and file-backed memory regions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">
+            Technical Achievements
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-2xl font-bold text-alex-green mb-2">~15,000</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Lines of C code written
+              </p>
+            </div>
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-2xl font-bold text-alex-green mb-2">100%</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Test suite pass rate
+              </p>
+            </div>
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-2xl font-bold text-alex-green mb-2">4 months</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Development timeline
+              </p>
+            </div>
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg">
+              <h3 class="text-2xl font-bold text-alex-green mb-2">
+                Full POSIX
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                System call compliance
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">
+            Key Challenges & Learning
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            Building an OS from scratch presented unique challenges that
+            deepened my systems programming expertise:
+          </p>
+          <ul
+            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
+          >
+            <li>
+              <strong>Debugging at the kernel level:</strong> Developed skills
+              in using GDB for kernel debugging without standard debugging tools
+            </li>
+            <li>
+              <strong>Race conditions:</strong> Mastered synchronization
+              primitives and lock ordering to prevent deadlocks
+            </li>
+            <li>
+              <strong>Memory management:</strong> Gained deep understanding of
+              virtual memory, page tables, and TLB management
+            </li>
+            <li>
+              <strong>System architecture:</strong> Learned to design clean
+              interfaces between kernel subsystems
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">Skills Developed</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            This project provided invaluable experience in:
+          </p>
+          <ul
+            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
+          >
+            <li>Low-level C programming and x86 assembly</li>
+            <li>Concurrent programming and synchronization</li>
+            <li>Memory management and virtual memory systems</li>
+            <li>File system design and implementation</li>
+            <li>Hardware/software interface and interrupt handling</li>
+            <li>Debugging complex systems-level code</li>
+            <li>Reading and understanding large codebases</li>
+          </ul>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">Impact</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300">
+            Completing Weenix gave me a comprehensive understanding of operating
+            system internals that has proven invaluable in my career. The
+            project's emphasis on building robust, efficient systems code has
+            influenced my approach to software engineering, particularly in
+            performance-critical applications and when working close to the
+            hardware.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Previous Project -->
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-heading text-2xl font-bold mb-8">Previous Project</h2>
+        <a
+          href="project-deepfake.html"
+          class="inline-flex items-center gap-2 text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+        >
+          <svg
+            class="w-4 h-4 rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+          Deepfake Detection CNN
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-800">
+      <div
+        class="max-w-6xl mx-auto text-center text-sm text-gray-600 dark:text-gray-400"
+      >
+        <p>© 2025 Alex Wick. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

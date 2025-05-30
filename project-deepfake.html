@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepfake Detection CNN - Alex Wick</title>
+    <meta
+      name="description"
+      content="Machine learning model using VGG16 architecture achieving 85% validation accuracy in detecting deepfake images"
+    />
+    <link rel="stylesheet" href="styles/output.css" />
+  </head>
+  <body
+    class="bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <!-- Header -->
+    <header
+      class="fixed top-0 w-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
+    >
+      <nav class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="font-heading font-bold text-xl">Alex Wick</a>
+          <div class="flex items-center gap-6">
+            <a
+              href="/"
+              class="text-sm font-medium hover:text-alex-green transition-colors"
+              >← Back to Portfolio</a
+            >
+            <button
+              id="theme-toggle"
+              aria-label="Toggle theme"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="pt-32 pb-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6">
+          Deepfake Detection CNN
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Advanced machine learning model achieving 85% validation accuracy in
+          distinguishing real from AI-generated images
+        </p>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >Python</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >TensorFlow</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >Keras</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >VGG16</span
+          >
+          <span
+            class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+            >Computer Vision</span
+          >
+        </div>
+        <div class="flex gap-4">
+          <a
+            href="https://github.com/alexjwick"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-alex-green text-gray-900 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">Overview</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            As deepfake technology becomes increasingly sophisticated, the
+            ability to detect AI-generated images is crucial for maintaining
+            trust in digital media. This project implements a custom
+            Convolutional Neural Network (CNN) based on the VGG16 architecture
+            to identify deepfake images with high accuracy.
+          </p>
+          <p class="text-lg text-gray-700 dark:text-gray-300">
+            The model was trained on a diverse dataset of real and AI-generated
+            faces, learning to identify subtle artifacts and patterns that
+            distinguish authentic images from deepfakes.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">
+            Technical Approach
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            The project involved several key technical components:
+          </p>
+          <ul
+            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
+          >
+            <li>
+              <strong>Architecture:</strong> Custom CNN implementation based on
+              VGG16, known for its effectiveness in image classification tasks
+            </li>
+            <li>
+              <strong>Data Preprocessing:</strong> Implemented augmentation
+              techniques to improve model generalization
+            </li>
+            <li>
+              <strong>Training Strategy:</strong> Used transfer learning to
+              leverage pre-trained weights, then fine-tuned on deepfake-specific
+              features
+            </li>
+            <li>
+              <strong>Optimization:</strong> Applied regularization techniques
+              to prevent overfitting
+            </li>
+            <li>
+              <strong>Evaluation:</strong> Comprehensive testing on holdout
+              validation set
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">Key Results</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg text-center">
+              <h3 class="text-3xl font-bold text-alex-green mb-2">85%</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Validation Accuracy
+              </p>
+            </div>
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg text-center">
+              <h3 class="text-3xl font-bold text-alex-green mb-2">0.92</h3>
+              <p class="text-gray-600 dark:text-gray-400">AUC-ROC Score</p>
+            </div>
+            <div class="bg-white dark:bg-dark-bg p-6 rounded-lg text-center">
+              <h3 class="text-3xl font-bold text-alex-green mb-2">~50ms</h3>
+              <p class="text-gray-600 dark:text-gray-400">Inference Time</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">
+            Implementation Details
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            The model architecture consists of:
+          </p>
+          <ul
+            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
+          >
+            <li>Convolutional base from VGG16 for feature extraction</li>
+            <li>
+              Custom fully connected layers for deepfake-specific classification
+            </li>
+            <li>Batch normalization and dropout for regularization</li>
+            <li>Binary cross-entropy loss with Adam optimizer</li>
+          </ul>
+          <div class="mt-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+            <p class="text-sm text-gray-600 dark:text-gray-400 font-mono">
+              Model: "deepfake_detector"<br />
+              Total params: 15,234,881<br />
+              Trainable params: 7,642,369<br />
+              Non-trainable params: 7,592,512
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">
+            Challenges & Solutions
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            Several challenges were encountered and overcome during development:
+          </p>
+          <ul
+            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
+          >
+            <li>
+              <strong>Dataset Imbalance:</strong> Addressed through strategic
+              data augmentation and weighted loss functions
+            </li>
+            <li>
+              <strong>Overfitting:</strong> Mitigated using dropout layers and
+              early stopping
+            </li>
+            <li>
+              <strong>Computational Resources:</strong> Optimized training
+              through mixed precision and gradient accumulation
+            </li>
+            <li>
+              <strong>Generalization:</strong> Improved by training on diverse
+              deepfake generation methods
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="font-heading text-3xl font-bold mb-6">
+            Future Enhancements
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            Potential improvements for the model include:
+          </p>
+          <ul
+            class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-2 ml-4"
+          >
+            <li>
+              Expanding to video deepfake detection using temporal analysis
+            </li>
+            <li>
+              Implementing attention mechanisms to highlight suspicious regions
+            </li>
+            <li>Creating an API for real-time detection in applications</li>
+            <li>
+              Training on newer deepfake generation techniques as they emerge
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-heading text-2xl font-bold mb-8">Next Project</h2>
+        <a
+          href="project-weenix.html"
+          class="inline-flex items-center gap-2 text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+        >
+          Weenix Operating System
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-800">
+      <div
+        class="max-w-6xl mx-auto text-center text-sm text-gray-600 dark:text-gray-400"
+      >
+        <p>© 2025 Alex Wick. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
