@@ -13,14 +13,16 @@ if (
   html.classList.remove("dark");
 }
 
-themeToggle.addEventListener("click", () => {
-  html.classList.toggle("dark");
-  if (html.classList.contains("dark")) {
-    localStorage.theme = "dark";
-  } else {
-    localStorage.theme = "light";
-  }
-});
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    html.classList.toggle("dark");
+    if (html.classList.contains("dark")) {
+      localStorage.theme = "dark";
+    } else {
+      localStorage.theme = "light";
+    }
+  });
+}
 
 // Mobile menu toggle
 const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
