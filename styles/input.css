@@ -3,11 +3,13 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-family-sans: "Inter", sans-serif;
-  --font-family-heading: "Space Grotesk", sans-serif;
+  --font-family-sans: "Georgia", serif;
+  --font-family-heading: "Georgia", serif;
 
-  --color-alex-green: #00d67e;
-  --color-alex-green-light-text: #00693e;
+  --color-alex-green: #001f3f;
+  --color-alex-green-light-text: #003f7f;
+  --color-white: #f5f5dc;
+  --color-gray-900: #001f3f;
   --color-dark-bg: #0f0f0f;
   --color-dark-surface: #1a1a1a;
 }
@@ -17,7 +19,7 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00d67e 0%, #00a86b 100%);
+  background: linear-gradient(135deg, #001f3f 0%, #003f7f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -82,3 +84,9 @@ html {
   font-weight: 700;
   src: url("../fonts/space-grotesk-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+/* Beige and Navy overrides */
+body { font-family: Georgia, serif; }
+.bg-white{background-color:#f5f5dc !important;}
+.text-gray-900{color:#001f3f !important;}
+
