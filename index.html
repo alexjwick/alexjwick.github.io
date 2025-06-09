@@ -8,99 +8,61 @@
       name="description"
       content="Portfolio of Alex Wick, a product builder and software engineer specializing in turning ideas into shipped products. Explore projects, experience, and skills in Computer Science, Next.js, AWS, and more."
     />
-    <link
-      rel="preload"
-      href="fonts/inter-v18-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/inter-v18-latin-500.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/inter-v18-latin-600.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/inter-v18-latin-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/space-grotesk-v21-latin-500.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/space-grotesk-v21-latin-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
     <link rel="stylesheet" href="styles/output.css" />
   </head>
   <body
-    class="bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300"
+    class="font-serif bg-warm-beige dark:bg-dark-bg text-deep-navy dark:text-dark-text transition-colors duration-300"
   >
     <!-- Header -->
     <header
-      class="fixed top-0 w-full bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800"
+      class="fixed top-0 w-full bg-cream/90 dark:bg-dark-surface/90 backdrop-blur-md z-50 border-b border-light-grey dark:border-dark-border"
     >
       <nav class="max-w-6xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <a href="#home" class="font-heading font-bold text-xl">Alex Wick</a>
+          <a
+            href="#home"
+            class="font-serif font-bold text-xl text-deep-navy dark:text-dark-text"
+            >Alex Wick</a
+          >
 
           <div
             id="main-nav-links"
-            class="hidden absolute top-full left-0 right-0 w-full bg-white dark:bg-dark-bg shadow-lg p-6 flex-col items-stretch gap-4 z-40 md:flex md:static md:w-auto md:flex-row md:items-center md:gap-8 md:p-0 md:shadow-none md:bg-transparent dark:md:bg-transparent"
+            class="hidden absolute top-full left-0 right-0 w-full bg-cream dark:bg-dark-surface shadow-lg p-6 flex-col items-stretch gap-4 z-40 md:flex md:static md:w-auto md:flex-row md:items-center md:gap-8 md:p-0 md:shadow-none md:bg-transparent dark:md:bg-transparent"
           >
             <a
               href="#about"
-              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              class="block md:inline text-sm font-medium text-soft-charcoal dark:text-dark-text-secondary hover:text-warm-brown dark:hover:text-dark-accent transition-colors py-2 md:py-0"
               >About</a
             >
             <a
               href="#experience"
-              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              class="block md:inline text-sm font-medium text-soft-charcoal dark:text-dark-text-secondary hover:text-warm-brown dark:hover:text-dark-accent transition-colors py-2 md:py-0"
               >Experience</a
             >
             <a
               href="#projects"
-              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              class="block md:inline text-sm font-medium text-soft-charcoal dark:text-dark-text-secondary hover:text-warm-brown dark:hover:text-dark-accent transition-colors py-2 md:py-0"
               >Projects</a
             >
             <a
               href="#press"
-              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              class="block md:inline text-sm font-medium text-soft-charcoal dark:text-dark-text-secondary hover:text-warm-brown dark:hover:text-dark-accent transition-colors py-2 md:py-0"
               >Press</a
             >
             <a
               href="#contact"
-              class="block md:inline text-sm font-medium hover:text-alex-green transition-colors py-2 md:py-0"
+              class="block md:inline text-sm font-medium text-soft-charcoal dark:text-dark-text-secondary hover:text-warm-brown dark:hover:text-dark-accent transition-colors py-2 md:py-0"
               >Contact</a
             >
             <a
               href="#resume"
-              class="block text-center md:text-left md:inline-block bg-gray-900 dark:bg-alex-green text-white dark:text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+              class="block text-center md:text-left md:inline-block bg-muted-gold dark:bg-dark-accent text-deep-navy dark:text-dark-bg px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
               >Resume</a
             >
             <button
               id="theme-toggle"
               aria-label="Toggle theme"
-              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors self-center md:self-auto mt-4 md:mt-0 cursor-pointer"
+              class="p-2 rounded-lg hover:bg-light-grey dark:hover:bg-dark-card transition-colors self-center md:self-auto mt-4 md:mt-0 cursor-pointer"
             >
               <svg
                 class="w-5 h-5 hidden dark:block"
@@ -153,12 +115,12 @@
       class="min-h-screen flex items-center justify-center px-6 pt-20"
     >
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6">
-          Turning <span class="gradient-text">Loose Ideas</span><br />
+        <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6">
+          Turning <span class="text-warm-brown">Loose Ideas</span><br />
           Into Shipped Products
         </h1>
         <p
-          class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+          class="text-xl md:text-2xl text-soft-charcoal dark:text-dark-text-secondary mb-8 max-w-2xl mx-auto"
         >
           Computer Science @ Brown • Builder at heart • Happiest when solving
           hard problems with people who care about the details
@@ -166,13 +128,13 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
-            class="bg-alex-green text-gray-900 px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            class="bg-muted-gold dark:bg-dark-accent text-deep-navy dark:text-dark-bg px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             View Projects
           </a>
           <a
             href="#contact"
-            class="border border-gray-300 dark:border-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            class="border border-soft-charcoal dark:border-dark-text text-soft-charcoal dark:text-dark-text px-8 py-3 rounded-lg font-semibold hover:bg-soft-charcoal hover:text-cream dark:hover:bg-dark-text dark:hover:text-dark-bg transition-colors"
           >
             Let's Connect
           </a>
@@ -181,15 +143,19 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+    <section id="about" class="py-20 px-6 bg-cream dark:bg-dark-surface">
       <div class="max-w-4xl mx-auto">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8">About</h2>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8">About</h2>
         <div class="prose prose-lg dark:prose-invert max-w-none">
-          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-6"
+          >
             I'm a builder who loves turning loose ideas into products that make
             a dent.
           </p>
-          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-6"
+          >
             Finishing my Computer Science degree at Brown gave me a rock-solid
             technical foundation, and building real products put those skills to
             the test. In the last few years I've prototyped a digital health app
@@ -197,7 +163,9 @@
             hits per month, and delivered factory software at BETA Technologies
             that shaved hours off technicians' days.
           </p>
-          <p class="text-lg text-gray-700 dark:text-gray-300">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-6"
+          >
             I swap comfortably between code, customers, and metrics—whatever
             moves the needle. Curious by default, data-minded by habit, and
             happiest working with people who care about the details. Always
@@ -207,38 +175,38 @@
 
         <!-- Skills -->
         <div class="mt-12">
-          <h3 class="font-heading text-2xl font-bold mb-6">Technical Skills</h3>
+          <h3 class="font-serif text-2xl font-bold mb-6">Technical Skills</h3>
           <div class="flex flex-wrap gap-3">
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >Python</span
             >
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >TypeScript</span
             >
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >Next.js</span
             >
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >React</span
             >
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >AWS</span
             >
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >PostgreSQL</span
             >
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >Machine Learning</span
             >
             <span
-              class="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium"
+              class="px-4 py-2 bg-light-grey dark:bg-dark-card text-soft-charcoal dark:text-dark-text rounded-full text-sm font-medium"
               >Full-Stack Development</span
             >
           </div>
@@ -247,18 +215,18 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 px-6">
+    <section id="experience" class="py-20 px-6 dark:bg-dark-bg">
       <div class="max-w-4xl mx-auto">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-12">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-12">
           Experience
         </h2>
 
         <div class="space-y-12">
           <div
-            class="relative pl-16 border-l-2 border-gray-200 dark:border-gray-700"
+            class="relative pl-16 border-l-2 border-light-grey dark:border-dark-border"
           >
             <div
-              class="absolute -left-6 top-0 w-12 h-12 bg-white dark:bg-dark-surface border-2 border-gray-200 dark:border-gray-700 rounded-full overflow-hidden flex items-center justify-center"
+              class="absolute -left-6 top-0 w-12 h-12 bg-cream dark:bg-dark-card border-2 border-light-grey dark:border-dark-border rounded-full overflow-hidden flex items-center justify-center"
             >
               <img
                 src="assets/24cast-logo.png"
@@ -266,15 +234,19 @@
                 class="w-8 h-8 object-contain"
               />
             </div>
-            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+            <div
+              class="mb-1 text-sm text-soft-charcoal dark:text-dark-text-secondary"
+            >
               Sep 2023 - Nov 2024
             </div>
             <h3 class="text-xl font-semibold mb-2">
               Web Operations Lead & Developer
             </h3>
-            <div class="text-gray-600 dark:text-gray-400 mb-3">24cast.org</div>
+            <div class="text-soft-charcoal dark:text-dark-text-secondary mb-3">
+              24cast.org
+            </div>
             <ul
-              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+              class="list-disc list-inside text-soft-charcoal dark:text-dark-text-secondary space-y-2"
             >
               <li>
                 Recruited and led cross-functional team of 5; owned GTM strategy
@@ -292,10 +264,10 @@
           </div>
 
           <div
-            class="relative pl-16 border-l-2 border-gray-200 dark:border-gray-700"
+            class="relative pl-16 border-l-2 border-light-grey dark:border-dark-border"
           >
             <div
-              class="absolute -left-6 top-0 w-12 h-12 bg-white dark:bg-dark-surface border-2 border-gray-200 dark:border-gray-700 rounded-full overflow-hidden flex items-center justify-center"
+              class="absolute -left-6 top-0 w-12 h-12 bg-cream dark:bg-dark-card border-2 border-light-grey dark:border-dark-border rounded-full overflow-hidden flex items-center justify-center"
             >
               <img
                 src="assets/beta-logo.png"
@@ -303,15 +275,17 @@
                 class="w-8 h-8 object-contain"
               />
             </div>
-            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+            <div
+              class="mb-1 text-sm text-soft-charcoal dark:text-dark-text-secondary"
+            >
               May 2024 - Oct 2024
             </div>
             <h3 class="text-xl font-semibold mb-2">Software Engineer Intern</h3>
-            <div class="text-gray-600 dark:text-gray-400 mb-3">
+            <div class="text-soft-charcoal dark:text-dark-text-secondary mb-3">
               BETA Technologies
             </div>
             <ul
-              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+              class="list-disc list-inside text-soft-charcoal dark:text-dark-text-secondary space-y-2"
             >
               <li>
                 Led cross-functional squad (quality, ops, eng) to launch factory
@@ -329,10 +303,10 @@
           </div>
 
           <div
-            class="relative pl-16 border-l-2 border-gray-200 dark:border-gray-700"
+            class="relative pl-16 border-l-2 border-light-grey dark:border-dark-border"
           >
             <div
-              class="absolute -left-6 top-0 w-12 h-12 bg-white dark:bg-dark-surface border-2 border-gray-200 dark:border-gray-700 rounded-full overflow-hidden flex items-center justify-center"
+              class="absolute -left-6 top-0 w-12 h-12 bg-cream dark:bg-dark-card border-2 border-light-grey dark:border-dark-border rounded-full overflow-hidden flex items-center justify-center"
             >
               <img
                 src="assets/brown-logo.png"
@@ -340,15 +314,17 @@
                 class="w-8 h-8 object-contain"
               />
             </div>
-            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+            <div
+              class="mb-1 text-sm text-soft-charcoal dark:text-dark-text-secondary"
+            >
               Jan 2024 - Aug 2024
             </div>
             <h3 class="text-xl font-semibold mb-2">Teaching Assistant</h3>
-            <div class="text-gray-600 dark:text-gray-400 mb-3">
+            <div class="text-soft-charcoal dark:text-dark-text-secondary mb-3">
               Brown University Department of Computer Science
             </div>
             <ul
-              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+              class="list-disc list-inside text-soft-charcoal dark:text-dark-text-secondary space-y-2"
             >
               <li>
                 Fall 2024: Socially Responsible Computing content development
@@ -362,10 +338,10 @@
           </div>
 
           <div
-            class="relative pl-16 border-l-2 border-gray-200 dark:border-gray-700"
+            class="relative pl-16 border-l-2 border-light-grey dark:border-dark-border"
           >
             <div
-              class="absolute -left-6 top-0 w-12 h-12 bg-white dark:bg-dark-surface border-2 border-gray-200 dark:border-gray-700 rounded-full overflow-hidden flex items-center justify-center"
+              class="absolute -left-6 top-0 w-12 h-12 bg-cream dark:bg-dark-card border-2 border-light-grey dark:border-dark-border rounded-full overflow-hidden flex items-center justify-center"
             >
               <img
                 src="assets/bluehouse-group-logo.png"
@@ -373,15 +349,17 @@
                 class="w-8 h-8 object-contain"
               />
             </div>
-            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+            <div
+              class="mb-1 text-sm text-soft-charcoal dark:text-dark-text-secondary"
+            >
               Aug 2022 - May 2024
             </div>
             <h3 class="text-xl font-semibold mb-2">Developer Intern</h3>
-            <div class="text-gray-600 dark:text-gray-400 mb-3">
+            <div class="text-soft-charcoal dark:text-dark-text-secondary mb-3">
               Bluehouse Group
             </div>
             <ul
-              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+              class="list-disc list-inside text-soft-charcoal dark:text-dark-text-secondary space-y-2"
             >
               <li>
                 Reimagined local radio station brand online: designed content
@@ -396,10 +374,10 @@
           </div>
 
           <div
-            class="relative pl-16 border-l-2 border-gray-200 dark:border-gray-700"
+            class="relative pl-16 border-l-2 border-light-grey dark:border-dark-border"
           >
             <div
-              class="absolute -left-6 top-0 w-12 h-12 bg-white dark:bg-dark-surface border-2 border-gray-200 dark:border-gray-700 rounded-full overflow-hidden flex items-center justify-center"
+              class="absolute -left-6 top-0 w-12 h-12 bg-cream dark:bg-dark-card border-2 border-light-grey dark:border-dark-border rounded-full overflow-hidden flex items-center justify-center"
             >
               <img
                 src="assets/freedays-logo.png"
@@ -407,15 +385,19 @@
                 class="w-8 h-8 object-contain"
               />
             </div>
-            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+            <div
+              class="mb-1 text-sm text-soft-charcoal dark:text-dark-text-secondary"
+            >
               Jun 2023 - Sep 2023
             </div>
             <h3 class="text-xl font-semibold mb-2">
               Co-Founder, Software Engineer
             </h3>
-            <div class="text-gray-600 dark:text-gray-400 mb-3">Freedays</div>
+            <div class="text-soft-charcoal dark:text-dark-text-secondary mb-3">
+              Freedays
+            </div>
             <ul
-              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+              class="list-disc list-inside text-soft-charcoal dark:text-dark-text-secondary space-y-2"
             >
               <li>
                 Led software development of a solution for vaping cessation
@@ -430,10 +412,10 @@
           </div>
 
           <div
-            class="relative pl-16 border-l-2 border-gray-200 dark:border-gray-700"
+            class="relative pl-16 border-l-2 border-light-grey dark:border-dark-border"
           >
             <div
-              class="absolute -left-6 top-0 w-12 h-12 bg-white dark:bg-dark-surface border-2 border-gray-200 dark:border-gray-700 rounded-full overflow-hidden flex items-center justify-center"
+              class="absolute -left-6 top-0 w-12 h-12 bg-cream dark:bg-dark-card border-2 border-light-grey dark:border-dark-border rounded-full overflow-hidden flex items-center justify-center"
             >
               <img
                 src="assets/b-lab-logo.png"
@@ -441,15 +423,17 @@
                 class="w-8 h-8 object-contain"
               />
             </div>
-            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+            <div
+              class="mb-1 text-sm text-soft-charcoal dark:text-dark-text-secondary"
+            >
               Jun 2023 - Jul 2023
             </div>
             <h3 class="text-xl font-semibold mb-2">Breakthrough Lab Fellow</h3>
-            <div class="text-gray-600 dark:text-gray-400 mb-3">
+            <div class="text-soft-charcoal dark:text-dark-text-secondary mb-3">
               Nelson Center for Entrepreneurship
             </div>
             <ul
-              class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+              class="list-disc list-inside text-soft-charcoal dark:text-dark-text-secondary space-y-2"
             >
               <li>
                 Participated in Brown University's 8-week startup accelerator,
@@ -470,44 +454,45 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+    <section
+      id="projects"
+      class="py-20 px-6 bg-light-grey dark:bg-dark-surface"
+    >
       <div class="max-w-6xl mx-auto">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-12">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-12">
           Featured Projects
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Project 1: 24cast.org -->
           <div
-            class="bg-white dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            class="bg-cream dark:bg-dark-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
           >
-            <div
-              class="h-48 bg-gradient-to-br from-blue-500 to-purple-600"
-            ></div>
+            <div class="h-48 bg-slate-blue"></div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">24cast.org</h3>
-              <p class="text-gray-600 dark:text-gray-400 mb-4">
+              <p class="text-soft-charcoal dark:text-dark-text-secondary mb-4">
                 Election forecast platform built with Next.js/AWS. Scaled to
                 30k+ MAU with real-time data processing and journalist-friendly
                 insights.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >Next.js</span
                 >
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >AWS</span
                 >
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >TypeScript</span
                 >
               </div>
               <a
                 href="project-24cast.html"
-                class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+                class="text-warm-brown dark:text-dark-accent font-medium hover:underline"
                 >View Project →</a
               >
             </div>
@@ -515,34 +500,32 @@
 
           <!-- Project 2: Deepfake Detection -->
           <div
-            class="bg-white dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            class="bg-cream dark:bg-dark-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
           >
-            <div
-              class="h-48 bg-gradient-to-br from-green-500 to-teal-600"
-            ></div>
+            <div class="h-48 bg-muted-gold"></div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Deepfake Detection CNN</h3>
-              <p class="text-gray-600 dark:text-gray-400 mb-4">
+              <p class="text-soft-charcoal dark:text-dark-text-secondary mb-4">
                 Developed ML model using VGG16 architecture achieving 75%
                 validation accuracy. Custom CNN implementation from scratch.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >Python</span
                 >
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >TensorFlow</span
                 >
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >Keras</span
                 >
               </div>
               <a
                 href="project-deepfake.html"
-                class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+                class="text-warm-brown dark:text-dark-accent font-medium hover:underline"
                 >View Project →</a
               >
             </div>
@@ -550,36 +533,34 @@
 
           <!-- Project 3: Weenix OS -->
           <div
-            class="bg-white dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            class="bg-cream dark:bg-dark-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
           >
-            <div
-              class="h-48 bg-gradient-to-br from-orange-500 to-red-600"
-            ></div>
+            <div class="h-48 bg-warm-brown"></div>
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">
                 Weenix Operating System
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 mb-4">
+              <p class="text-soft-charcoal dark:text-dark-text-secondary mb-4">
                 Full Unix-like OS kernel with threads, processes, device
                 drivers, file system, and virtual memory implementation.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >C</span
                 >
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >Systems</span
                 >
                 <span
-                  class="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded"
+                  class="text-xs px-2 py-1 bg-light-grey dark:bg-dark-bg rounded"
                   >Kernel</span
                 >
               </div>
               <a
                 href="project-weenix.html"
-                class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+                class="text-warm-brown dark:text-dark-accent font-medium hover:underline"
                 >View Project →</a
               >
             </div>
@@ -589,20 +570,24 @@
     </section>
 
     <!-- Press Section -->
-    <section id="press" class="py-20 px-6 bg-white dark:bg-dark-bg">
+    <section id="press" class="py-20 px-6 bg-cream dark:bg-dark-surface">
       <div class="max-w-4xl mx-auto">
         <h2
-          class="font-heading text-3xl md:text-4xl font-bold mb-12 text-center md:text-left"
+          class="font-serif text-3xl md:text-4xl font-bold mb-12 text-center md:text-left"
         >
           Press
         </h2>
         <div class="space-y-8">
-          <article class="border-b border-gray-200 dark:border-gray-700 pb-8">
-            <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+          <article
+            class="border-b border-light-grey dark:border-dark-border pb-8"
+          >
+            <div
+              class="text-sm text-soft-charcoal dark:text-dark-text-secondary mb-2"
+            >
               September 26, 2024
             </div>
             <h3
-              class="text-2xl font-semibold mb-3 hover:text-alex-green transition-colors"
+              class="text-2xl font-semibold mb-3 hover:text-warm-brown dark:hover:text-dark-accent transition-colors"
             >
               <a
                 href="https://www.browndailyherald.com/article/2024/09/get-to-know-the-election-result-prediction-model-developed-by-brown-students"
@@ -612,24 +597,28 @@
                 Brown students</a
               >
             </h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">
+            <p class="text-soft-charcoal dark:text-dark-text-secondary mb-4">
               The Brown Daily Herald
             </p>
             <a
               href="https://www.browndailyherald.com/article/2024/09/get-to-know-the-election-result-prediction-model-developed-by-brown-students"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+              class="text-warm-brown dark:text-dark-accent font-medium hover:underline"
               >Read More &rarr;</a
             >
           </article>
 
-          <article class="border-b border-gray-200 dark:border-gray-700 pb-8">
-            <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+          <article
+            class="border-b border-light-grey dark:border-dark-border pb-8"
+          >
+            <div
+              class="text-sm text-soft-charcoal dark:text-dark-text-secondary mb-2"
+            >
               July 7, 2023
             </div>
             <h3
-              class="text-2xl font-semibold mb-3 hover:text-alex-green transition-colors"
+              class="text-2xl font-semibold mb-3 hover:text-warm-brown dark:hover:text-dark-accent transition-colors"
             >
               <a
                 href="https://www.brown.edu/news/2023-07-07/b-lab"
@@ -639,14 +628,14 @@
                 vaping cessation and more</a
               >
             </h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4">
+            <p class="text-soft-charcoal dark:text-dark-text-secondary mb-4">
               Brown University News
             </p>
             <a
               href="https://www.brown.edu/news/2023-07-07/b-lab"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-alex-green-light-text dark:text-alex-green font-medium hover:underline"
+              class="text-warm-brown dark:text-dark-accent font-medium hover:underline"
               >Read More &rarr;</a
             >
           </article>
@@ -655,10 +644,12 @@
     </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="py-20 px-6 bg-gray-50 dark:bg-dark-surface">
+    <section id="resume" class="py-20 px-6 bg-light-grey dark:bg-dark-surface">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8">Resume</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8">Resume</h2>
+        <p
+          class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-8"
+        >
           Download my full resume for a comprehensive overview of my experience
           and qualifications.
         </p>
@@ -667,14 +658,14 @@
             href="Alex_Wick_Resume.pdf"
             download
             target="_blank"
-            class="bg-alex-green text-gray-900 px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            class="bg-muted-gold dark:bg-dark-accent text-deep-navy dark:text-dark-bg px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Download PDF Resume
           </a>
           <a
             href="resume.html"
             target="_blank"
-            class="border border-gray-300 dark:border-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            class="border border-soft-charcoal dark:border-dark-text text-soft-charcoal dark:text-dark-text px-8 py-3 rounded-lg font-semibold hover:bg-soft-charcoal hover:text-cream dark:hover:bg-dark-text dark:hover:text-dark-bg transition-colors"
           >
             View HTML Version
           </a>
@@ -683,13 +674,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6">
+    <section id="contact" class="py-20 px-6 dark:bg-dark-bg">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8">
           Let's Connect
         </h2>
         <p
-          class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto"
+          class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-8 max-w-2xl mx-auto"
         >
           I'm always interested in new opportunities and collaborations. Whether
           you have a project in mind or just want to chat, feel free to reach
@@ -701,7 +692,7 @@
           <a
             href="mailto:alex@alexwick.co"
             aria-label="Email Alex Wick"
-            class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            class="p-3 bg-light-grey dark:bg-dark-card rounded-lg hover:bg-light-grey dark:hover:bg-dark-border transition-colors"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -718,7 +709,7 @@
             href="https://linkedin.com/in/alexjwick"
             aria-label="Alex Wick on LinkedIn"
             target="_blank"
-            class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            class="p-3 bg-light-grey dark:bg-dark-card rounded-lg hover:bg-light-grey dark:hover:bg-dark-border transition-colors"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -732,7 +723,7 @@
             href="https://github.com/alexjwick"
             aria-label="Alex Wick on GitHub"
             target="_blank"
-            class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            class="p-3 bg-light-grey dark:bg-dark-card rounded-lg hover:bg-light-grey dark:hover:bg-dark-border transition-colors"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -744,7 +735,7 @@
 
         <a
           href="mailto:alex@alexwick.co"
-          class="bg-alex-green text-gray-900 px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-block"
+          class="bg-muted-gold dark:bg-dark-accent text-deep-navy dark:text-dark-bg px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-block"
         >
           Send Me an Email
         </a>
@@ -752,9 +743,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-800">
+    <footer
+      class="py-8 px-6 border-t border-light-grey dark:border-dark-border dark:bg-dark-bg"
+    >
       <div
-        class="max-w-6xl mx-auto text-center text-sm text-gray-600 dark:text-gray-400"
+        class="max-w-6xl mx-auto text-center text-sm text-soft-charcoal dark:text-dark-text-secondary"
       >
         <p>© 2025 Alex Wick. All rights reserved.</p>
       </div>
