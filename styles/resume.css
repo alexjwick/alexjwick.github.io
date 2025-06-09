@@ -3,20 +3,20 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #F5F5DC;
-  color: #000080;
+  background-color: #D2BCA1;
+  color: #273F5B;
 }
 .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
   padding: 20px;
-  background-color: #F5F5DC;
+  background-color: #D2BCA1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 header {
   text-align: center;
-  border-bottom: 2px solid #000080;
+  border-bottom: 2px solid #A76825;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -27,27 +27,27 @@ header h1 {
 header p {
   margin-top: 5px;
   font-size: 0.9em;
-  color: #000080;
+  color: #7F715F;
 }
 h2 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #7F715F;
   padding-bottom: 5px;
   margin-top: 30px;
   font-size: 1.5em;
-  color: #000080;
+  color: #273F5B;
   text-transform: uppercase;
 }
 h3 {
   margin-bottom: 5px;
   font-size: 1.2em;
-  color: #000080;
+  color: #6F481C;
 }
 .job-title-company {
   font-weight: bold;
 }
 .date-location {
   font-style: italic;
-  color: #000080;
+  color: #7F715F;
   font-size: 0.9em;
   margin-bottom: 10px;
 }
