@@ -3,11 +3,11 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-family-sans: "Inter", sans-serif;
-  --font-family-heading: "Space Grotesk", sans-serif;
+  --font-family-sans: "Georgia", serif;
+  --font-family-heading: "Georgia", serif;
 
-  --color-alex-green: #00d67e;
-  --color-alex-green-light-text: #00693e;
+  --color-alex-green: #D4AF7A;
+  --color-alex-green-light-text: #8B6F47;
   --color-dark-bg: #0f0f0f;
   --color-dark-surface: #1a1a1a;
 }
@@ -17,7 +17,7 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00d67e 0%, #00a86b 100%);
+  background: linear-gradient(135deg, #8B6F47 0%, #D4AF7A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -29,56 +29,22 @@ html {
   }
 }
 
-/* inter-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+body {
+  font-family: var(--font-family-sans);
+  background-color: #F5F1EB;
+  color: #4A4A4A;
 }
 
-/* inter-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/inter-v18-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1E3A5F;
+  font-family: var(--font-family-heading);
 }
 
-/* inter-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inter-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/inter-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* space-grotesk-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Space Grotesk";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/space-grotesk-v21-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* space-grotesk-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Space Grotesk";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/space-grotesk-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+a {
+  color: #8B6F47;
 }
