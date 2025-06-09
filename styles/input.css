@@ -6,10 +6,10 @@
   --font-family-sans: "Georgia", serif;
   --font-family-heading: "Georgia", serif;
 
-  --color-alex-green: #001f3f;
-  --color-alex-green-light-text: #003f7f;
-  --color-white: #f5f5dc;
-  --color-gray-900: #001f3f;
+  --color-alex-green: #000080;
+  --color-alex-green-light-text: #000080;
+  --color-white: #F5F5DC;
+  --color-gray-900: #000080;
   --color-dark-bg: #0f0f0f;
   --color-dark-surface: #1a1a1a;
 }
@@ -19,7 +19,7 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #001f3f 0%, #003f7f 100%);
+  background: linear-gradient(135deg, #F5F5DC 0%, #000080 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,6 +87,6 @@ html {
 
 /* Beige and Navy overrides */
 body { font-family: Georgia, serif; }
-.bg-white{background-color:#f5f5dc !important;}
-.text-gray-900{color:#001f3f !important;}
+.bg-white{background-color:#F5F5DC !important;}
+.text-gray-900{color:#000080 !important;}
 
