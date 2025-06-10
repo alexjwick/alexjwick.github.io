@@ -116,32 +116,46 @@
     <!-- Hero -->
     <div
       id="home"
-      class="min-h-screen flex items-center justify-center px-6 pt-20"
+      class="min-h-screen relative flex items-center px-6 pt-20"
     >
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6">
-          Turning <span class="text-warm-brown">Loose Ideas</span><br />
-          Into Shipped Products
-        </h1>
-        <p
-          class="text-xl md:text-2xl text-soft-charcoal dark:text-dark-text-secondary mb-8 max-w-2xl mx-auto"
-        >
-          Computer Science @ Brown • Builder at heart • Happiest when solving
-          hard problems with people who care about the details
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#projects"
-            class="bg-muted-gold dark:bg-dark-accent text-deep-navy dark:text-dark-bg px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+      <!-- Background Image - flush with right edge and bottom -->
+      <div class="absolute inset-0 flex items-end justify-end select-none">
+        <div class="relative w-[60%] md:w-[55%] lg:w-[50%] h-[95vh] md:h-[100vh] opacity-90">
+          <img
+            src="assets/hero-image.png"
+            alt="Alex working at a lathe in the workshop"
+            class="w-full h-full object-contain object-bottom select-none pointer-events-none"
+          />
+        </div>
+      </div>
+      
+      <!-- Text Content - positioned over background -->
+      <div class="relative z-10 max-w-6xl mx-auto w-full">
+        <div class="max-w-3xl">
+          <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 text-left">
+            Turning <span class="text-warm-brown">Loose Ideas</span><br />
+            Into Shipped Products
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-soft-charcoal dark:text-dark-text-secondary mb-8 max-w-xl"
           >
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            class="border border-soft-charcoal dark:border-dark-text text-soft-charcoal dark:text-dark-text px-8 py-3 rounded-lg font-semibold hover:bg-soft-charcoal hover:text-cream dark:hover:bg-dark-text dark:hover:text-dark-bg transition-colors"
-          >
-            Let's Connect
-          </a>
+            Computer Science @ Brown • Builder at heart • Happiest when solving
+            hard problems with people who care about the details
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#projects"
+              class="bg-muted-gold dark:bg-dark-accent text-deep-navy dark:text-dark-bg px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
+            >
+              View Projects
+            </a>
+            <a
+              href="#contact"
+              class="border border-soft-charcoal dark:border-dark-text text-soft-charcoal dark:text-dark-text px-8 py-3 rounded-lg font-semibold hover:bg-soft-charcoal hover:text-cream dark:hover:bg-dark-text dark:hover:text-dark-bg transition-colors text-center"
+            >
+              Let's Connect
+            </a>
+          </div>
         </div>
       </div>
     </div>
