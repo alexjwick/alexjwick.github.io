@@ -39,3 +39,214 @@ html {
     scroll-behavior: auto;
   }
 }
+
+/* macOS Window Styling */
+.macos-window {
+  position: relative;
+  background: #f6f6f6;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dark .macos-window {
+  background: #3c3c3c;
+  border-color: #555555;
+}
+
+.macos-titlebar {
+  height: 28px;
+  background: linear-gradient(to bottom, #e8e8e8, #d8d8d8);
+  border-bottom: 1px solid #c0c0c0;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  position: relative;
+}
+
+.dark .macos-titlebar {
+  background: linear-gradient(to bottom, #4a4a4a, #3a3a3a);
+  border-bottom-color: #2a2a2a;
+}
+
+.macos-controls {
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.macos-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.macos-control:hover {
+  transform: scale(1.1);
+}
+
+.macos-control.close {
+  background: linear-gradient(135deg, #ff6058, #ff4444);
+}
+
+.macos-control.minimize {
+  background: linear-gradient(135deg, #ffbd2e, #ffaa00);
+}
+
+.macos-control.fullscreen {
+  background: linear-gradient(135deg, #28ca42, #20aa35);
+}
+
+.macos-control:hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.macos-control.close:hover::after {
+  width: 6px;
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6'%3E%3Cpath d='M1 1l4 4M5 1L1 5' stroke='%23000' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.macos-control.minimize:hover::after {
+  width: 6px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.macos-control.fullscreen:hover::after {
+  width: 6px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.macos-content {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Histogram Styling */
+.histogram-bar {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.histogram-bar:hover {
+  opacity: 1;
+  transform: scaleY(1.05);
+  filter: brightness(1.1);
+}
+
+.histogram-container {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CNN Diagram Styling */
+.cnn-diagram {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cnn-layer {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.cnn-layer:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.layer-block {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cnn-layer:hover .layer-block {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.arrow {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  color: #374151;
+  transform: scale(1.2);
+}
+
+.layer-stack {
+  min-height: 16px;
+  min-width: 16px;
+}
+
+/* Layer-specific styling */
+.input-layer:hover .layer-block {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+}
+
+.conv-layer:hover .layer-block {
+  transform: translateY(-2px) rotate(2deg);
+}
+
+.pool-layer:hover .layer-block {
+  background: linear-gradient(45deg, #10b981, #34d399);
+}
+
+.fc-layer:hover div > div {
+  animation: pulse 0.6s ease-in-out infinite alternate;
+}
+
+.output-layer:hover .layer-block {
+  background: linear-gradient(45deg, #f59e0b, #fbbf24);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Weenix Terminal Styling */
+.weenix-terminal {
+  font-family: 'Courier New', Courier, monospace;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.weenix-terminal p {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
