@@ -18,10 +18,14 @@
     >
       <nav class="max-w-6xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <a href="/" class="font-serif font-bold text-xl text-deep-navy dark:text-dark-text">Alex Wick</a>
+          <a
+            href="/"
+            class="font-serif font-bold text-xl text-deep-navy dark:text-dark-text"
+            >Alex Wick</a
+          >
           <div class="flex items-center gap-6">
             <a
-              href="/"
+              href="/#projects"
               class="text-sm font-medium text-soft-charcoal dark:text-dark-text-secondary hover:text-warm-brown dark:hover:text-dark-accent transition-colors"
               >← Back to Portfolio</a
             >
@@ -59,7 +63,9 @@
         <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">
           Deepfake Detection CNN
         </h1>
-        <p class="text-xl text-soft-charcoal dark:text-dark-text-secondary mb-8">
+        <p
+          class="text-xl text-soft-charcoal dark:text-dark-text-secondary mb-8"
+        >
           Exploration of Convolutional Neural Networks for deepfake detection,
           culminating in a custom CNN achieving 75% validation accuracy on a
           challenging combined dataset of real and AI-generated images.
@@ -107,14 +113,18 @@
       <div class="max-w-4xl mx-auto">
         <div class="mb-12">
           <h2 class="font-serif text-3xl font-bold mb-6">Overview</h2>
-          <p class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4"
+          >
             The proliferation of highly realistic deepfakes poses a significant
             challenge to digital media integrity. This project aimed to develop
             an effective deepfake detection model. Initially, the goal was to
             improve upon the ~70% accuracy of a CNN-based model by Karandikar et
             al. (2020), which utilized the VGG16 architecture.
           </p>
-          <p class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4"
+          >
             The project involved working with datasets like FaceForensics++
             (first-generation deepfakes) and Celeb-DF (v2) (more advanced
             deepfakes). While the VGG16-based approach showed promise (achieving
@@ -137,7 +147,9 @@
           <h2 class="font-serif text-3xl font-bold mb-6">
             Technical Approach & Model Architectures
           </h2>
-          <p class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4"
+          >
             The project explored two main CNN-based approaches for deepfake
             detection after an initial pivot:
           </p>
@@ -146,7 +158,9 @@
           >
             <li>
               <strong>VGG16-based Model with Custom Head:</strong>
-              <ul class="list-disc list-inside text-base text-soft-charcoal dark:text-dark-text-secondary space-y-1 ml-6 mt-2">
+              <ul
+                class="list-disc list-inside text-base text-soft-charcoal dark:text-dark-text-secondary space-y-1 ml-6 mt-2"
+              >
                 <li>
                   Utilized transfer learning, leveraging the pretrained
                   convolutional layers of VGG16.
@@ -170,7 +184,9 @@
             </li>
             <li>
               <strong>Custom CNN Model (from scratch):</strong>
-              <ul class="list-disc list-inside text-base text-soft-charcoal dark:text-dark-text-secondary space-y-1 ml-6 mt-2">
+              <ul
+                class="list-disc list-inside text-base text-soft-charcoal dark:text-dark-text-secondary space-y-1 ml-6 mt-2"
+              >
                 <li>
                   Developed to address the complexity and overfitting issues
                   encountered with the VGG16-based model.
@@ -218,25 +234,39 @@
           <h2 class="font-serif text-3xl font-bold mb-6">Key Results</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-cream dark:bg-dark-card p-6 rounded-lg text-center">
-              <h3 class="text-3xl font-bold text-muted-gold dark:text-dark-accent mb-2">75%</h3>
+              <h3
+                class="text-3xl font-bold text-muted-gold dark:text-dark-accent mb-2"
+              >
+                75%
+              </h3>
               <p class="text-soft-charcoal dark:text-dark-text-secondary">
                 Validation Accuracy (Custom CNN on Combined FF++ & Celeb-DF v2)
               </p>
             </div>
             <div class="bg-cream dark:bg-dark-card p-6 rounded-lg text-center">
-              <h3 class="text-3xl font-bold text-muted-gold dark:text-dark-accent mb-2">75.7%</h3>
+              <h3
+                class="text-3xl font-bold text-muted-gold dark:text-dark-accent mb-2"
+              >
+                75.7%
+              </h3>
               <p class="text-soft-charcoal dark:text-dark-text-secondary">
                 Validation Accuracy (VGG16-based on Combined FF++ & Celeb-DF v2)
               </p>
             </div>
             <div class="bg-cream dark:bg-dark-card p-6 rounded-lg text-center">
-              <h3 class="text-3xl font-bold text-muted-gold dark:text-dark-accent mb-2">90%</h3>
+              <h3
+                class="text-3xl font-bold text-muted-gold dark:text-dark-accent mb-2"
+              >
+                90%
+              </h3>
               <p class="text-soft-charcoal dark:text-dark-text-secondary">
                 Validation Accuracy (VGG16-based on FaceForensics++ only)
               </p>
             </div>
           </div>
-          <p class="text-sm text-soft-charcoal dark:text-dark-text-secondary mt-4">
+          <p
+            class="text-sm text-soft-charcoal dark:text-dark-text-secondary mt-4"
+          >
             The original Karandikar et al. (2020) paper reported ~70% accuracy
             with their VGG16-based model. Both models developed in this project
             surpassed that on comparable tasks.
@@ -247,7 +277,9 @@
           <h2 class="font-serif text-3xl font-bold mb-6">
             Challenges & Learnings
           </h2>
-          <p class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4"
+          >
             Several challenges were encountered and overcome during development:
           </p>
           <ul
@@ -293,7 +325,9 @@
           <h2 class="font-serif text-3xl font-bold mb-6">
             Future Enhancements
           </h2>
-          <p class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4">
+          <p
+            class="text-lg text-soft-charcoal dark:text-dark-text-secondary mb-4"
+          >
             Potential improvements and future directions for the model include:
           </p>
           <ul
@@ -340,7 +374,9 @@
       </div>
     </section>
 
-    <footer class="py-8 px-6 border-t border-light-grey dark:border-dark-border dark:bg-dark-bg">
+    <footer
+      class="py-8 px-6 border-t border-light-grey dark:border-dark-border dark:bg-dark-bg"
+    >
       <div
         class="max-w-6xl mx-auto text-center text-sm text-soft-charcoal dark:text-dark-text-secondary"
       >
